@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int n,t,j,k,s=0;
+	long int f=1;
+	printf("Enter the number:");
+	scanf("%d",&n);
+	t=n;
+	while(n>0)
+	{
+		j=n%10;
+		for(k=1;k<=j;k++)
+		{
+			f=f*k;
+		}
+		s=s+f;
+		n=n/10;
+		f=1;
+	}
+	if(s==t)
+	printf("Given number is strong number");
+	else
+	printf("Given number is not a strong number");
+}
